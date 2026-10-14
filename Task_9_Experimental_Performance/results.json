@@ -1,0 +1,191 @@
+{
+  "rows": [
+    {
+      "algorithm": "Linear (iterative)",
+      "n": 1000,
+      "prep_ms": 0.0,
+      "avg_comps_success": 440.13,
+      "avg_comps_fail": 1000.0,
+      "avg_time_success_us": 42.999550000075715,
+      "avg_time_fail_us": 96.37377000004221,
+      "best_comps": 1,
+      "worst_comps": 1000
+    },
+    {
+      "algorithm": "Binary (recursive)",
+      "n": 1000,
+      "prep_ms": 0.1422180000076878,
+      "avg_comps_success": 9.08,
+      "avg_comps_fail": 9.99,
+      "avg_time_success_us": 4.256120000007968,
+      "avg_time_fail_us": 4.2090200000188815,
+      "best_comps": 1,
+      "worst_comps": 10
+    },
+    {
+      "algorithm": "Hash (chaining)",
+      "n": 1000,
+      "prep_ms": 0.9463509999960706,
+      "avg_comps_success": 1.34,
+      "avg_comps_fail": 0.66,
+      "avg_time_success_us": 0.9080400000982536,
+      "avg_time_fail_us": 0.6321300000422525,
+      "best_comps": 0,
+      "worst_comps": 3
+    },
+    {
+      "algorithm": "Linear (iterative)",
+      "n": 10000,
+      "prep_ms": 0.0,
+      "avg_comps_success": 5094.63,
+      "avg_comps_fail": 10000.0,
+      "avg_time_success_us": 543.566300000009,
+      "avg_time_fail_us": 1027.2953300000154,
+      "best_comps": 1,
+      "worst_comps": 10000
+    },
+    {
+      "algorithm": "Binary (recursive)",
+      "n": 10000,
+      "prep_ms": 2.022758000009617,
+      "avg_comps_success": 12.34,
+      "avg_comps_fail": 13.37,
+      "avg_time_success_us": 5.316409999949201,
+      "avg_time_fail_us": 6.512780000065277,
+      "best_comps": 1,
+      "worst_comps": 14
+    },
+    {
+      "algorithm": "Hash (chaining)",
+      "n": 10000,
+      "prep_ms": 12.288893999993888,
+      "avg_comps_success": 1.45,
+      "avg_comps_fail": 0.84,
+      "avg_time_success_us": 1.1022600000387683,
+      "avg_time_fail_us": 0.9201500000699525,
+      "best_comps": 0,
+      "worst_comps": 4
+    },
+    {
+      "algorithm": "Linear (iterative)",
+      "n": 100000,
+      "prep_ms": 0.0,
+      "avg_comps_success": 49255.95,
+      "avg_comps_fail": 100000.0,
+      "avg_time_success_us": 5219.629850000018,
+      "avg_time_fail_us": 8404.71148000006,
+      "best_comps": 1,
+      "worst_comps": 100000
+    },
+    {
+      "algorithm": "Binary (recursive)",
+      "n": 100000,
+      "prep_ms": 37.58853499999759,
+      "avg_comps_success": 15.75,
+      "avg_comps_fail": 16.69,
+      "avg_time_success_us": 5.6948299999248775,
+      "avg_time_fail_us": 5.155779999910237,
+      "best_comps": 1,
+      "worst_comps": 17
+    },
+    {
+      "algorithm": "Hash (chaining)",
+      "n": 100000,
+      "prep_ms": 274.3965429999946,
+      "avg_comps_success": 1.4,
+      "avg_comps_fail": 0.8,
+      "avg_time_success_us": 3.787859999988541,
+      "avg_time_fail_us": 0.9266799999352315,
+      "best_comps": 0,
+      "worst_comps": 4
+    },
+    {
+      "algorithm": "Linear (iterative)",
+      "n": 1000000,
+      "prep_ms": 0.0,
+      "avg_comps_success": 480744.51,
+      "avg_comps_fail": 1000000.0,
+      "avg_time_success_us": 39046.00043000002,
+      "avg_time_fail_us": 80297.59555000013,
+      "best_comps": 1,
+      "worst_comps": 1000000
+    },
+    {
+      "algorithm": "Binary (recursive)",
+      "n": 1000000,
+      "prep_ms": 613.0303470000058,
+      "avg_comps_success": 18.91,
+      "avg_comps_fail": 19.94,
+      "avg_time_success_us": 10.188739999961172,
+      "avg_time_fail_us": 8.734600000082082,
+      "best_comps": 1,
+      "worst_comps": 20
+    },
+    {
+      "algorithm": "Hash (chaining)",
+      "n": 1000000,
+      "prep_ms": 3633.0913030000006,
+      "avg_comps_success": 1.28,
+      "avg_comps_fail": 0.71,
+      "avg_time_success_us": 1.9348200000024465,
+      "avg_time_fail_us": 1.3299500000130138,
+      "best_comps": 0,
+      "worst_comps": 4
+    }
+  ],
+  "extra": {
+    "1000": {
+      "longest_chain": 4,
+      "agree": true,
+      "hash_m": 1361
+    },
+    "10000": {
+      "longest_chain": 6,
+      "agree": true,
+      "hash_m": 13337
+    },
+    "100000": {
+      "longest_chain": 6,
+      "agree": true,
+      "hash_m": 133337
+    },
+    "1000000": {
+      "longest_chain": 7,
+      "agree": true,
+      "hash_m": 1333357
+    },
+    "daily_update_1000_new_records_s": {
+      "hash_insert": 0.00135752700001035,
+      "sorted_merge": 0.5007269310000027,
+      "full_resort": 0.1986375339999995
+    },
+    "task12_projection": {
+      "Linear (iterative)": {
+        "avg_search_us": 59671.79799000008,
+        "cpu_utilisation_pct": 82.87749720833345,
+        "prep_s_per_day": 0.0,
+        "search_s_per_day": 71606.15758800009,
+        "total_s_per_day": 71606.15758800009
+      },
+      "Binary (recursive)": {
+        "avg_search_us": 9.461670000021627,
+        "cpu_utilisation_pct": 0.013141208333363371,
+        "prep_s_per_day": 0.6130303470000058,
+        "search_s_per_day": 11.354004000025952,
+        "total_s_per_day": 11.967034347025958
+      },
+      "Hash (chaining)": {
+        "avg_search_us": 1.63238500000773,
+        "cpu_utilisation_pct": 0.002267201388899625,
+        "prep_s_per_day": 3.6330913030000005,
+        "search_s_per_day": 1.958862000009276,
+        "total_s_per_day": 5.5919533030092765
+      }
+    },
+    "breakeven_searches_vs_linear_n1e6": {
+      "Binary (recursive)": 10.274997340231632,
+      "Hash (chaining)": 60.88622791915907
+    },
+    "requests_per_second": 13.88888888888889
+  }
+}

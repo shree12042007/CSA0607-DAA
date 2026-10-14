@@ -1,0 +1,20 @@
+Functional test cases
+  PASS  T1 key at first position of unsorted list
+  PASS  T2 key at last position of unsorted list
+  PASS  T3 key in middle
+  PASS  T4 absent key (inside range)
+  PASS  T5 absent key smaller than min
+  PASS  T6 absent key larger than max
+  PASS  T7 single-element list, present
+  PASS  T8 single-element list, absent
+  PASS  T9 empty list
+  PASS  T10 two elements, second present
+Randomised cross-validation (all three algorithms must agree)
+  PASS  T11 random agreement on 7 sizes x 300 queries
+Complexity-property tests
+  PASS  T12 binary worst case comparisons = floor(log2 n)+1 = 10 (got 10)
+  PASS  T13 linear worst case = n comparisons
+  PASS  T14 linear best case = 1 comparison
+  PASS  T15 hash load factor approx 0.75
+
+Tests passed: 15   failed: 0
