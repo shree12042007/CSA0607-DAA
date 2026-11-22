@@ -1,0 +1,5 @@
+ n_records  seq_comps  seq_time_ms  bin_rec_comps  bin_rec_time_ms  hash_build_ops  hash_build_ms  hash_lookup_comps  hash_lookup_ms
+      1000        751       0.0768              8          0.01550            1000           0.34                  1         0.00524
+     10000       7501       0.7779             11          0.02322           10000           4.29                  1         0.00579
+    100000      75001      21.7407             17          0.05006          100000          91.95                  1         0.00831
+   1000000     750001     527.7451             20          0.07906         1000000        1217.23                  1         0.03948
