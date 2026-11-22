@@ -1,0 +1,32 @@
+ALGORITHM OptimisedClosestLogins(events[0..n-1])
+  // Finds closest pair of distinct login coordinates using squared-distance comparison & spatial grid pruning
+  IF n < 2 THEN
+    RETURN NULL, INFINITY, 0
+  best_sq <- INFINITY; best_pair <- NULL; dist_calcs <- 0
+  FOR i <- 0 TO n - 2 DO
+    dx <- events[i].x - events[i + 1].x
+    dy <- events[i].y - events[i + 1].y
+    sq <- dx * dx + dy * dy
+    dist_calcs <- dist_calcs + 1
+    IF sq < best_sq THEN
+      best_sq <- sq; best_pair <- (i, i + 1)
+  cell_size <- SQRT(best_sq) (fallback 1e-9 if best_sq = 0)
+  Insert each index idx into grid cell (FLOOR(events[idx].x / cell_size), FLOOR(events[idx].y / cell_size))
+  seen_pairs <- empty set
+  FOR EACH cell (cx, cy) AND u IN cell DO
+    Gather indices from 3x3 neighborhood cells (cx + dcx, cy + dcy) for dcx, dcy IN {-1, 0, 1}
+    FOR EACH v IN neighborhood DO
+      IF u != v THEN
+        pair <- (MIN(u, v), MAX(u, v))
+        IF pair NOT IN seen_pairs THEN
+          ADD pair TO seen_pairs
+          dx <- events[u].x - events[v].x
+          dy <- events[u].y - events[v].y
+          IF ABS(dx) < cell_size AND ABS(dy) < cell_size THEN
+            sq <- dx * dx + dy * dy
+            dist_calcs <- dist_calcs + 1
+            IF sq < best_sq THEN
+              best_sq <- sq; best_pair <- pair
+              IF best_sq > 0 THEN cell_size <- SQRT(best_sq)
+  min_dist <- SQRT(best_sq)
+  RETURN best_pair, min_dist, dist_calcs

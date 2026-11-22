@@ -1,0 +1,18 @@
+=== PART A: ORIGINAL MODULE EXECUTION ON PROMPT TEST DATA ===
+sort_alerts output   : [('A4', 9), ('A3', 5), ('A3', 5), ('A5', 1), ('A5', 1)]  | Expected: [('A2', 9), ('A4', 9), ('A3', 5), ('A1', 3), ('A5', 1)]
+is_blocked queries   : {'10.0.0.9': False, '10.0.0.5': False, '8.8.8.8': False}  | Expected: {'10.0.0.9': True, '10.0.0.5': True, '8.8.8.8': False}
+find_signature output: [0]  | Expected: [0, 8]
+closest_logins output: ((0, 2), 60.440052945046304)  | Expected: ((0, 5), 1.4142135623730951)
+
+=== PART D: CLOSEST LOGINS BATCH EXPERIMENTS (1,000 TO 8,000) ===
+ batch_size_n  bf_dist_calcs  opt_dist_calcs  calc_reduction_pct  bf_time_ms  opt_time_ms  min_dist_km
+         1000         499500            1009               99.80      238.66         3.88       0.3850
+         3000        4498500            3008               99.93     2188.13        21.37       0.2026
+         5000       12497500            5006               99.96     6365.64        36.62       0.0373
+         8000       31996000            8015               99.97    16010.34        54.58       0.0320
+
+=== PART D: INSERTION SORT COMPARISONS (NEARLY SORTED VS RANDOM) ===
+ n_alerts  nearly_sorted_comps  random_alerts_comps  ratio_random_to_nearly
+      100                 2124                 2412                    1.14
+      500                55630                55401                    1.00
+     1000               223768               220611                    0.99

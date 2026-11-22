@@ -1,0 +1,15 @@
+ALGORITHM OptimisedSortAlerts(Alerts[0..n-1])
+  // Sorts alert tuples (id, severity) by severity descending while preserving arrival order (stability)
+  comparisons <- 0
+  FOR i <- 1 TO n - 1 DO
+    key <- Alerts[i]
+    j <- i - 1
+    WHILE j >= 0 DO
+      comparisons <- comparisons + 1
+      IF Alerts[j].severity < key.severity THEN
+        Alerts[j + 1] <- Alerts[j]
+        j <- j - 1
+      ELSE
+        BREAK
+    Alerts[j + 1] <- key
+  RETURN Alerts, comparisons

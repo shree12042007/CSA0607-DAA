@@ -1,0 +1,6 @@
+ALGORITHM OptimisedIsBlocked(BlocklistSet, ip)
+  // Checks whether ip is present in pre-built hash set BlocklistSet in O(1) expected time
+  IF ip IN BlocklistSet THEN
+    RETURN TRUE, 1
+  ELSE
+    RETURN FALSE, 1

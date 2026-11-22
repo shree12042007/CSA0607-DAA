@@ -1,0 +1,4 @@
+n_alerts,nearly_sorted_comps,random_alerts_comps,ratio_random_to_nearly
+100,2124,2412,1.14
+500,55630,55401,1.0
+1000,223768,220611,0.99

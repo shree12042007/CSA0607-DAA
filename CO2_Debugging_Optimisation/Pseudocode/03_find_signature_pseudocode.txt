@@ -1,0 +1,25 @@
+ALGORITHM OptimisedFindSignature(log, pattern)
+  // Finds all starting indices of pattern in log using brute-force alignment with safe mismatch skip
+  n <- LENGTH(log); m <- LENGTH(pattern)
+  hits <- empty list; comparisons <- 0
+  IF m = 0 OR m > n THEN
+    RETURN hits, comparisons
+  last_start <- n - m
+  i <- 0
+  WHILE i <= last_start DO
+    j <- 0
+    WHILE j < m DO
+      comparisons <- comparisons + 1
+      IF log[i + j] != pattern[j] THEN
+        BREAK
+      j <- j + 1
+    IF j = m THEN
+      APPEND i TO hits
+      i <- i + 1
+    ELSE
+      mismatch_char <- log[i + j]
+      IF mismatch_char NOT IN pattern THEN
+        i <- i + j + 1
+      ELSE
+        i <- i + 1
+  RETURN hits, comparisons
