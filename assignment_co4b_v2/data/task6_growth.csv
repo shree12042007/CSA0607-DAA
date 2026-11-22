@@ -1,8 +1,0 @@
-locations,delivery_stops,states_evaluated,theoretical_max_states
-4,3,24,64
-5,4,64,160
-6,5,160,384
-7,6,384,896
-8,7,896,2048
-9,8,2048,4608
-10,9,4608,10240
