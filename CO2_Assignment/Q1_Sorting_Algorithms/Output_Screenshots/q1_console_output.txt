@@ -1,0 +1,10 @@
+              dataset  n      algorithm  comparisons  swaps_or_shifts
+  Nearly_Sorted_95pct 60 Selection Sort         1770                1
+  Nearly_Sorted_95pct 60    Bubble Sort         1580               77
+  Nearly_Sorted_95pct 60 Insertion Sort          136               77
+   Reverse_Disordered 60 Selection Sort         1770               30
+   Reverse_Disordered 60    Bubble Sort         1770             1770
+   Reverse_Disordered 60 Insertion Sort         1770             1770
+Duplicate_Scores_Edge 15 Selection Sort          105                0
+Duplicate_Scores_Edge 15    Bubble Sort           14                0
+Duplicate_Scores_Edge 15 Insertion Sort           14                0

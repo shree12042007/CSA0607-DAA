@@ -1,0 +1,4 @@
+ n_drones  orig_pairs_examined  orig_dist_calcs  new_candidate_pairs  new_dist_calcs  calc_reduction_pct  verified_min_dist
+       15                  105              105                    5              15                85.7            38.6843
+       40                  780              780                   45              42                94.6             9.2188
+       90                 4005             4005                  502              96                97.6             7.8405

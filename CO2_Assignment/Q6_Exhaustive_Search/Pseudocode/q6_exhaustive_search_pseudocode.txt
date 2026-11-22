@@ -1,0 +1,14 @@
+ALGORITHM ExhaustiveAirliftSearch(Packages[0..n-1], payload_limit)
+  best_value <- 0; best_weight <- 0; best_mask <- 0
+  total_combinations <- 2^n; feasible_count <- 0
+  FOR mask <- 0 TO total_combinations - 1 DO
+    weight_sum <- 0; value_sum <- 0
+    FOR i <- 0 TO n - 1 DO
+      IF bit i of mask is 1 THEN
+        weight_sum <- weight_sum + Packages[i].weight
+        value_sum <- value_sum + Packages[i].value
+    IF weight_sum <= payload_limit THEN
+      feasible_count <- feasible_count + 1
+      IF value_sum > best_value THEN
+        best_value <- value_sum; best_weight <- weight_sum; best_mask <- mask
+  RETURN decode_subset(Packages, best_mask), best_weight, best_value, total_combinations, feasible_count

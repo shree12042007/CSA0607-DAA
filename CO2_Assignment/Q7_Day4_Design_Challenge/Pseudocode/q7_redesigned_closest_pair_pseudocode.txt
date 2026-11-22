@@ -1,0 +1,17 @@
+ALGORITHM GridPrunedClosestPair(P[0..n-1])
+  Initialize best_dist <- INFINITY; best_pair <- NULL; dist_calcs <- 0
+  FOR i <- 0 TO n - 2 DO
+    d <- EuclideanDist(P[i], P[i+1]); dist_calcs <- dist_calcs + 1
+    IF d < best_dist THEN best_dist <- d; best_pair <- (i, i+1)
+  cell_size <- MAX(best_dist, 1e-9)
+  Partition P into spatial grid cells (FLOOR(x / cell_size), FLOOR(y / cell_size))
+  seen_pairs <- empty set
+  FOR EACH cell (cx, cy) AND point u IN cell DO
+    FOR dx IN {-1, 0, 1} AND dy IN {-1, 0, 1} DO
+      FOR EACH point v IN cell (cx + dx, cy + dy) DO
+        IF u != v AND unordered_pair(u, v) NOT IN seen_pairs THEN
+          ADD unordered_pair(u, v) TO seen_pairs
+          IF |P[u].x - P[v].x| < best_dist AND |P[u].y - P[v].y| < best_dist THEN
+            d <- EuclideanDist(P[u], P[v]); dist_calcs <- dist_calcs + 1
+            IF d < best_dist THEN best_dist <- d; best_pair <- unordered_pair(u, v)
+  RETURN best_pair, best_dist, dist_calcs

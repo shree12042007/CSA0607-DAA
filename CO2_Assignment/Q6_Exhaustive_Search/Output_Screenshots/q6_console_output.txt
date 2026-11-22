@@ -1,0 +1,4 @@
+ n_packages  payload_limit  combinations_2_pow_n  feasible_subsets  best_weight  best_value  selected_count
+          6             48                    64                27           43         280               3
+         12            100                  4096              1528           91         638               6
+         18            148                262144             89835          147         998              10

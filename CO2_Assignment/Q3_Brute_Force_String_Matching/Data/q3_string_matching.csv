@@ -1,0 +1,4 @@
+test_case,text_len,pat_len,matches,char_comparisons
+1_Low_Work_Distinct,55,9,0,48
+2_High_Work_WorstCase,81,21,1,1281
+3_Repeated_Prefix_PartialHit,96,12,1,162

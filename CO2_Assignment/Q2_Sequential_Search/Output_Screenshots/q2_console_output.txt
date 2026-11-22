@@ -1,0 +1,13 @@
+ list_size          scenario target  comparisons
+        20     Success_First  T-100            1
+        20    Success_Middle  T-110           11
+        20      Success_Last  T-119           20
+        20 Unsuccessful_Miss T-9999           20
+       100     Success_First  T-100            1
+       100    Success_Middle  T-150           51
+       100      Success_Last  T-199          100
+       100 Unsuccessful_Miss T-9999          100
+       500     Success_First  T-100            1
+       500    Success_Middle  T-350          251
+       500      Success_Last  T-599          500
+       500 Unsuccessful_Miss T-9999          500

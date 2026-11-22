@@ -1,0 +1,33 @@
+ALGORITHM SelectionSort(A[0..n-1])
+  comps <- 0; swaps <- 0
+  FOR i <- 0 TO n - 2 DO
+    min_idx <- i
+    FOR j <- i + 1 TO n - 1 DO
+      comps <- comps + 1
+      IF A[j] < A[min_idx] THEN min_idx <- j
+    IF min_idx != i THEN
+      SWAP(A[i], A[min_idx]); swaps <- swaps + 1
+  RETURN A, comps, swaps
+
+ALGORITHM BubbleSort(A[0..n-1])
+  comps <- 0; swaps <- 0
+  FOR i <- 0 TO n - 2 DO
+    swapped <- FALSE
+    FOR j <- 0 TO n - 2 - i DO
+      comps <- comps + 1
+      IF A[j] > A[j + 1] THEN
+        SWAP(A[j], A[j + 1]); swaps <- swaps + 1; swapped <- TRUE
+    IF NOT swapped THEN BREAK
+  RETURN A, comps, swaps
+
+ALGORITHM InsertionSort(A[0..n-1])
+  comps <- 0; shifts <- 0
+  FOR i <- 1 TO n - 1 DO
+    key <- A[i]; j <- i - 1
+    WHILE j >= 0 DO
+      comps <- comps + 1
+      IF A[j] > key THEN
+        A[j + 1] <- A[j]; shifts <- shifts + 1; j <- j - 1
+      ELSE BREAK
+    A[j + 1] <- key
+  RETURN A, comps, shifts

@@ -1,0 +1,11 @@
+ALGORITHM BruteForceStringMatch(T[0..n-1], P[0..m-1])
+  comparisons <- 0; matches <- empty list
+  IF m = 0 OR m > n THEN RETURN matches, comparisons
+  FOR i <- 0 TO n - m DO
+    j <- 0
+    WHILE j < m DO
+      comparisons <- comparisons + 1
+      IF T[i + j] != P[j] THEN BREAK
+      j <- j + 1
+    IF j = m THEN APPEND i TO matches
+  RETURN matches, comparisons

@@ -1,0 +1,16 @@
+ALGORITHM BruteForceConvexHull(P[0..n-1])
+  hull_edges <- empty list; hull_vertices <- empty set; side_checks <- 0
+  FOR i <- 0 TO n - 1 DO
+    FOR j <- i + 1 TO n - 1 DO
+      pos_count <- 0; neg_count <- 0
+      FOR k <- 0 TO n - 1 DO
+        IF k != i AND k != j THEN
+          side_checks <- side_checks + 1
+          cp <- (P[j].x - P[i].x) * (P[k].y - P[i].y) - (P[j].y - P[i].y) * (P[k].x - P[i].x)
+          IF cp > 0 THEN pos_count <- pos_count + 1
+          ELSE IF cp < 0 THEN neg_count <- neg_count + 1
+      IF pos_count = 0 OR neg_count = 0 THEN
+        APPEND (i, j) TO hull_edges
+        ADD i, j TO hull_vertices
+  Order hull_vertices counter-clockwise around centroid
+  RETURN ordered_hull, hull_edges, side_checks
