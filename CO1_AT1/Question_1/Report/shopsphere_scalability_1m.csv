@@ -1,0 +1,7 @@
+Module,Formula,Est_Ops_1M,Est_Time_Sec,Meets_10m_600s
+M1: Duplicate Detector (Current),n(n-1)/2,"499,999,500,000",4999.99,NO (Exceeds 600s)
+M2: API Rate Limiter,n - 1 (for n=2^k),"999,999",0.01,YES
+S2: Sorted Index Search,log2(n) + 1,21,2.1e-07,YES
+M4: Rec Engine (Current),Theta(n^2),"1,000,000,000,000",10000.0,NO (Exceeds 600s)
+M4: Rec Engine (Redesigned),Theta(n log2 n),"19,931,568",0.1993,YES
+M5: Sales Analytics Engine,Theta(n (log2 n)^2),"397,267,425",3.9727,YES
